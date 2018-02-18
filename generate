@@ -1,8 +1,10 @@
+#!/usr/bin/env php
 <?php
 
 $currentDir = __DIR__;
 $url = $argv[1];
 $onlyClasses = $argv[2];
+$namespace = $argv[3];
 
 require "$currentDir/vendor/autoload.php";
 
@@ -23,6 +25,9 @@ $params = [
 
 if (!empty($onlyClasses)) {
     $params['classNames'] = $onlyClasses;
+    if (!empty($namespace)) {
+        $params['namespaceName'] = $namespace;
+    }
 }
 
 $generator = new \Wsdl2PhpGenerator\Generator();

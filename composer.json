@@ -1,5 +1,5 @@
 {
-  "name": "perf2k2/wsdl2phpui",
+  "name": "perf2k2/wsdl2phpcli",
   "description": "User interface for wsdl2phpgenerator",
   "version": "0.1.0",
   "type": "library",

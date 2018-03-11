@@ -13,6 +13,7 @@
   ],
   "require": {
     "php": "7.*",
-    "wsdl2phpgenerator/wsdl2phpgenerator": "3.4.*"
+    "wsdl2phpgenerator/wsdl2phpgenerator": "3.4.*",
+    "vanilla/garden-cli": "2.0.*"
   }
 }

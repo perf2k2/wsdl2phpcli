@@ -9,10 +9,13 @@ chmod +x ./wsdl2phpcli/generate
 
 Usage:
 ```bash
-./generate url [classNames] [namespaceName]
+./generate [options] url
 ```
-
 For example:
 ```bash
-./generate https://api.direct.yandex.com/v5/campaigns?wsdl TextCampaignSettingsEnum,TextCampaignSearchStrategyTypeEnum "api\entities\campaigns\textcampaign"
+./generate -c TextCampaignSettingsEnum,TextCampaignSearchStrategyTypeEnum -n "api\entities\campaigns\textcampaign" https://api.direct.yandex.com/v5/campaigns?wsdl
+```
+To see all options use 
+```
+./generate --help
 ```

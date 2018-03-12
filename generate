@@ -2,11 +2,19 @@
 <?php
 
 $currentDir = __DIR__;
-$url = $argv[1];
-$onlyClasses = $argv[2];
-$namespace = $argv[3];
-
 require "$currentDir/vendor/autoload.php";
+
+$cli = new Garden\Cli\Cli();
+
+$args = $cli->description('Generate php classes from wsdl document')
+    ->arg('url', 'Wsdl document url', true)
+    ->opt('namespace:n', 'Namespace to insert at top of file')
+    ->opt('classes:c', 'List of classes separated by commas')
+    ->parse($argv);
+
+$url = $args->getArg('url');
+$onlyClasses = $args->getOpt('classes');
+$namespace = $args->getOpt('namespace');
 
 if (preg_match("/^(http|https):\/\/([^?]+)?/", $url, $matches) !== 1) {
     throw new RuntimeException('Unable to parse url');
@@ -23,9 +31,9 @@ $params = [
     'outputDir' => "$currentDir/output/$fileName",
 ];
 
-if (!empty($onlyClasses)) {
+if (!$onlyClasses !== null) {
     $params['classNames'] = $onlyClasses;
-    if (!empty($namespace)) {
+    if ($namespace !== null) {
         $params['namespaceName'] = $namespace;
     }
 }

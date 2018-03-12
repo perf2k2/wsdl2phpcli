@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6737097621c7a47af04201e36d31615",
+    "content-hash": "eede7f7e8cd912c6335ea4c53748156e",
     "packages": [
         {
             "name": "symfony/options-resolver",
@@ -120,12 +120,54 @@
             "time": "2018-01-30T19:27:44+00:00"
         },
         {
-            "name": "wsdl2phpgenerator/wsdl2phpgenerator",
-            "version": "dev-customized-class",
+            "name": "vanilla/garden-cli",
+            "version": "v2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/perf2k2/wsdl2phpgenerator",
-                "reference": "472bece5dfd5efa23f11ef53700c0b5611de11ca"
+                "url": "https://github.com/vanilla/garden-cli.git",
+                "reference": "6b18be18b1fe3848a8dcb0e7111da7ff54ad2817"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vanilla/garden-cli/zipball/6b18be18b1fe3848a8dcb0e7111da7ff54ad2817",
+                "reference": "6b18be18b1fe3848a8dcb0e7111da7ff54ad2817",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Garden\\Cli\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Todd Burry",
+                    "email": "todd@vanillaforums.com"
+                }
+            ],
+            "description": "A full-featured, yet ridiculously simple commandline parser for your next php cli script. Stop fighting with getopt().",
+            "time": "2018-02-20T18:11:52+00:00"
+        },
+        {
+            "name": "wsdl2phpgenerator/wsdl2phpgenerator",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wsdl2phpgenerator/wsdl2phpgenerator.git",
+                "reference": "558c8a66677c117de2db5f5a4ae7f327c4b67f67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wsdl2phpgenerator/wsdl2phpgenerator/zipball/558c8a66677c117de2db5f5a4ae7f327c4b67f67",
+                "reference": "558c8a66677c117de2db5f5a4ae7f327c4b67f67",
+                "shasum": ""
             },
             "require": {
                 "ext-soap": "*",
@@ -136,7 +178,7 @@
             "require-dev": {
                 "kasperg/phing-github": "0.2.*",
                 "phing/phing": "~2.7",
-                "php-vcr/php-vcr": "1.2.6 - 1.2.7|^1.3.1",
+                "php-vcr/php-vcr": "1.2 - 1.2.7|^1.3.1",
                 "php-vcr/phpunit-testlistener-vcr": "~1.1.2",
                 "phpunit/phpunit": "~4.4",
                 "psr/log": "~1.0",
@@ -151,13 +193,7 @@
                     ]
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Wsdl2PhpGenerator\\Tests\\": [
-                        "tests/src"
-                    ]
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -166,15 +202,13 @@
                 "soap",
                 "wsdl"
             ],
-            "time": "2018-02-19 20:01:02"
+            "time": "2016-10-30T21:02:36+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wsdl2phpgenerator/wsdl2phpgenerator": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
